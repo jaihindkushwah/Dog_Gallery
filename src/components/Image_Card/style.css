@@ -1,0 +1,19 @@
+.image_card{
+    text-align: center;
+}
+.image_card img{
+    width: 147px;
+    height: 140px;
+    cursor: pointer;
+    transition-duration: 300ms;
+    transform: scale(.99);
+}
+.image_card img:hover{
+    transform: scale(1.04);
+}
+.image_card p{
+    margin-top: -3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(103, 103, 103);
+}

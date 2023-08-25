@@ -1,0 +1,81 @@
+
+.selected_dog_breed_container{
+    /* display: none; */
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(153, 151, 151, 0.5);
+    width: 100%;
+}
+.selected_dog_breed{
+    width: 720px;
+    display: flex;
+    border-radius: 10px;
+    min-height: 500px;
+    box-shadow: 2px  3px 1em #bcb9b9;
+    /* display: flex; */
+    background-color: white;
+    flex-direction: column;
+    opacity: 1;
+}
+.selected_dog_breed header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(155, 155, 155);;
+    border-radius: 10px 10px 0px 0px;
+}
+.selected_dog_breed header div{
+    flex: 1;
+    text-align:center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width:480px){
+    .selected_dog_breed{
+        width: 95vw;
+    }   
+}
+@media screen and ((min-width:480px) and (max-width:720px)){
+    .selected_dog_breed{
+        width: 80vw;
+    }   
+}
+@media screen and ((min-width:720px) and (max-width:920px)){
+    .selected_dog_breed{
+        width: 70vw;
+    }   
+}
+@media screen and ((min-width:920px) and (max-width:1280px)){
+    .selected_dog_breed{
+        width: 60vw;
+    }   
+}
+
+
+
+/* main content */
+
+.selected_dog_breed_main{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+       
+}
+.selected_dog_breed_main p{
+    padding-left: 25px;
+    margin-bottom: -5px;
+    margin-top: 2px;
+}
+.selected_dog_breed .sub_breeds , .selected_dog_breed .more_images{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

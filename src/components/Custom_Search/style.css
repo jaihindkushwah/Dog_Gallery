@@ -1,0 +1,118 @@
+
+.custom_search_container{
+    /* display: none; */
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(153, 151, 151, 0.5);
+    width: 100%;
+    
+}
+.custom_search{
+    width: 720px;
+    display: flex;
+    border-radius: 10px;
+    min-height: 450px;
+    box-shadow: 2px  3px 1em #bcb9b9;
+    display: flex;
+    background-color: white;
+    opacity: 1;
+    flex-direction: column;
+}
+.custom_search header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(155, 155, 155);;
+    border-radius: 10px 10px 0px 0px;
+}
+.custom_search header div{
+    flex: 1;
+    text-align:center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width:480px){
+    .custom_search{
+        width: 95vw;
+    }   
+}
+@media screen and ((min-width:480px) and (max-width:720px)){
+    .custom_search{
+        width: 80vw;
+    }   
+}
+@media screen and ((min-width:720px) and (max-width:920px)){
+    .custom_search{
+        width: 70vw;
+    }   
+}
+@media screen and ((min-width:920px) and (max-width:1280px)){
+    .custom_search{
+        width: 60vw;
+    }   
+}
+
+/*  */
+
+.custom_search_main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.inputs input,.inputs select{
+    width: 200px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 10px;
+    height: 30px;
+    color: rgb(74, 74, 74);
+}
+.custom_search_container .button{
+    text-align: center;
+}
+.custom_search_container .button button{
+    border: none;
+    padding: 6px 12px;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.custom_search_container .button button:hover{
+    background-color: rgb(5, 104, 5);
+    color: rgb(239, 237, 237);
+  }
+.sampleImages{
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.sampleImages > div{
+    max-height: 175px;
+    overflow-y: scroll;
+}
+.sampleImages > div::-webkit-scrollbar{
+    width: 2px;
+}
+.sampleImages > div::-webkit-scrollbar-thumb{
+    background: #bcb9b9;
+}
+
