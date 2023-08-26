@@ -79,14 +79,15 @@
     flex-direction: column;
     gap: 15px;
 }
-.sub_breeds>div, .more_images>div{
+.sub_breeds>div,.more_images>div{
     max-height: 178px;
     overflow-y: scroll;
+    padding: 2px;
 }
 
-.sub_breeds>div::-webkit-scrollbar, .more_images>div::-webkit-scrollbar{
+.sub_breeds>div::-webkit-scrollbar,.more_images>div::-webkit-scrollbar{
     width: 2px;
 }
-.sub_breeds>div::-webkit-scrollbar, .more_images>div::-webkit-scrollbar-thumb{
+.sub_breeds>div::-webkit-scrollbar,.more_images>div::-webkit-scrollbar-thumb{
     background: #bcb9b9;
 }
