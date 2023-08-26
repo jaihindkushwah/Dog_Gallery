@@ -79,3 +79,14 @@
     flex-direction: column;
     gap: 15px;
 }
+.sub_breeds>div, .more_images>div{
+    max-height: 178px;
+    overflow-y: scroll;
+}
+
+.sub_breeds>div::-webkit-scrollbar, .more_images>div::-webkit-scrollbar{
+    width: 2px;
+}
+.sub_breeds>div::-webkit-scrollbar, .more_images>div::-webkit-scrollbar-thumb{
+    background: #bcb9b9;
+}

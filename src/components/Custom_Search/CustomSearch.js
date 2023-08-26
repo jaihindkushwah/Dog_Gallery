@@ -32,6 +32,7 @@ function CustomSearch({isVisible,setIsVisible,data}) {
   if(!isVisible){
     return<></>
   }
+
   return (
         <div className='custom_search_container'>
           <div className='custom_search'>
@@ -57,7 +58,7 @@ function CustomSearch({isVisible,setIsVisible,data}) {
                   <div className='sampleImages'>
                       <p>Showing {customData.length} images of {userInput.option}</p>
                       <div>
-                      <ImageList data={customData}/> 
+                        <ImageList data={customData}/>
                       </div> 
                   </div>
               </div>

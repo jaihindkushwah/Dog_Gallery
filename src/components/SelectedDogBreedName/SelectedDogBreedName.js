@@ -34,12 +34,16 @@ function SelectedDogBreedName() {
               <div className='selected_dog_breed_main'>
                     <div className='sub_breeds'>
                       <p>Sub Breeds</p>
-                      <ImageList data={subBreedData.subBreed}/>
+                      <div>
+                        <ImageList data={subBreedData.subBreed}/>
+                      </div>
                     </div>  
 
                     <div className='more_images'>
                       <p>More Images</p>
-                      <ImageList data={subBreedData.randomData}/>
+                      <div>
+                        <ImageList data={subBreedData.randomData}/>
+                      </div>
                     </div>           
 
               </div>
