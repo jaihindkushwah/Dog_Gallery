@@ -8,3 +8,30 @@ async function GetAllBreedData(data){
     return await Promise.all(d);
 }
 export default GetAllBreedData;
+
+export async function getSubBreedData(breedName){
+    const response= await fetch(`https://dog.ceo/api/breed/${breedName}/list`);
+    const result= await response.json();
+    const getImageData=result.message.map( async(el)=>{
+    const resp= await fetch(`https://dog.ceo/api/breed/${breedName}/${el}/images/random `);
+    const res= await resp.json();
+    return res.message;
+    })
+    const data=Promise.all(getImageData);
+    const imageList=(await data).map((el,i)=>({img:el,name:result.message[i]}));
+    return imageList;
+}
+export async function getRandomFourData(breedName){
+    const response= await fetch(`https://dog.ceo/api/breed/${breedName}/images/random/4`);
+    const result= await response.json();
+    const imageList=(await result.message).map((el,i)=>({img:el,name:breedName}));
+    console.log(imageList);
+    return imageList;
+}
+
+export async function getAllBreedLists(){
+    const response= await fetch('https://dog.ceo/api/breeds/list/all');
+    const result= await response.json();
+    // console.log(result);
+    return result.message;
+}

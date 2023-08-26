@@ -20,6 +20,7 @@ function CustomSearch({isVisible,setIsVisible,data}) {
       const result=await response.json();
       const modifiedData=result.message.map((el)=>({name:userInput.option,img:el}))
       setCustomData(modifiedData);
+      setUserInput({option:"",number:""})
     } catch (error) {
       console.log("unable to fetched the data");
       alert("unable to fetched the data")

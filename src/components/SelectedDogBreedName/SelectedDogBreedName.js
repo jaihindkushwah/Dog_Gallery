@@ -1,15 +1,29 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './index.css'
 import ImageList from '../ImageList/ImageList'
 import { SelectedDog } from '../../App'
+import { getRandomFourData, getSubBreedData } from '../../Api/getAllBreedData';
 
 function SelectedDogBreedName() {
   const {selectedDog,setSelectedDog} =useContext(SelectedDog);
-  // console.log(selectedDog);
-  if(selectedDog.name.length===0){
-    return<></>
-  }
+  const [subBreedData,setSubBreedData]=useState({subBreed:[],randomData:[]});
+  useEffect(()=>{
+      (async function(){
+        try {
+            const allImagesOfABreed= await getSubBreedData(selectedDog.name);
+            const randomData= await getRandomFourData(selectedDog.name);
+            // console.log(d);
+            
+            setSubBreedData({subBreed:allImagesOfABreed,randomData:randomData});
+        } catch (error) {
+            alert("Unable to fetch the data");
+        }
+      })();
 
+  },[selectedDog])
+
+
+  console.log(selectedDog);
   return (
         <div className='selected_dog_breed_container'>
           <div className='selected_dog_breed'>
@@ -20,12 +34,12 @@ function SelectedDogBreedName() {
               <div className='selected_dog_breed_main'>
                     <div className='sub_breeds'>
                       <p>Sub Breeds</p>
-                      <ImageList/>
+                      <ImageList data={subBreedData.subBreed}/>
                     </div>  
 
                     <div className='more_images'>
                       <p>More Images</p>
-                      <ImageList/>
+                      <ImageList data={subBreedData.randomData}/>
                     </div>           
 
               </div>
