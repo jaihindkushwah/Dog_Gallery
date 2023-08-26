@@ -1,5 +1,6 @@
 .image_card{
     text-align: center;
+    z-index: 2;
 }
 .image_card img{
     width: 147px;
@@ -7,6 +8,8 @@
     cursor: pointer;
     transition-duration: 300ms;
     transform: scale(.99);
+    z-index: 4;
+    background-color: rgb(179, 174, 174);
 }
 .image_card img:hover{
     transform: scale(1.04);

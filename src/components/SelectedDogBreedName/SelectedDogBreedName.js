@@ -22,8 +22,7 @@ function SelectedDogBreedName() {
 
   },[selectedDog])
 
-
-  console.log(selectedDog);
+  
   return (
         <div className='selected_dog_breed_container'>
           <div className='selected_dog_breed'>

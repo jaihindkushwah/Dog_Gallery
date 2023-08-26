@@ -24,13 +24,11 @@ export async function getRandomFourData(breedName){
     const response= await fetch(`https://dog.ceo/api/breed/${breedName}/images/random/4`);
     const result= await response.json();
     const imageList=(await result.message).map((el,i)=>({img:el,name:breedName}));
-    console.log(imageList);
     return imageList;
 }
 
 export async function getAllBreedLists(){
     const response= await fetch('https://dog.ceo/api/breeds/list/all');
     const result= await response.json();
-    // console.log(result);
     return result.message;
 }

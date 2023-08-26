@@ -10,7 +10,7 @@ function ImageCard({img,name}) {
   const {setSelectedDog}=useContext(SelectedDog);
   return (
     <div className='image_card' onClick={()=>{setSelectedDog({name:name})}}>
-        <img src={img}  alt={name || 'img_card'} />
+        <img src={img}  loading='lazy'  alt={name || 'img_card'} />
         <p>{capitalString(name) || "Breed Name"}</p>
     </div>
   )
