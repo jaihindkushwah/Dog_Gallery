@@ -8,6 +8,7 @@ export const capitalString=(str)=>{
 
 function ImageCard({img,name}) {
   const {setSelectedDog}=useContext(SelectedDog);
+  
   return (
     <div className='image_card' onClick={()=>{setSelectedDog({name:name})}}>
         <img src={img}  loading='lazy'  alt={name || 'img_card'} />

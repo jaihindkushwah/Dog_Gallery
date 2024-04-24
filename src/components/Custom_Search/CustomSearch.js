@@ -9,10 +9,12 @@ function CustomSearch({isVisible,setIsVisible,data}) {
   const getImagesHandler= async()=>{
     if(userInput.option.length===0 || userInput.number.length===0){
         alert("Please enter valid input");
+        // console.log("userInput1",userInput);
         return ;
     }
     if(isNaN(parseInt(userInput.number))){
       alert("Please enter valid input");
+      // console.log("userInput2",userInput);
       return ;
     }
     try {
@@ -20,7 +22,7 @@ function CustomSearch({isVisible,setIsVisible,data}) {
       const result=await response.json();
       const modifiedData=result.message.map((el)=>({name:userInput.option,img:el}))
       setCustomData(modifiedData);
-      setUserInput({option:"",number:""})
+      setUserInput({...userInput,number:""})
     } catch (error) {
       console.log("unable to fetched the data");
       alert("unable to fetched the data")
